@@ -5,6 +5,7 @@
 <!--    <hr>-->
 <!--    <computed/>-->
     <watch></watch>
+      <LifeCycle></LifeCycle>
   </div>
 </template>
 
@@ -12,12 +13,15 @@
 // import setUp from './components/setUp.vue'
 // import computed from './components/computed.vue'
 import watch from './components/watch.vue'
+import LifeCycle from './components/LifeCycle.vue'
+
 export default {
   name: 'App',
   components: {
     // setUp,
     // computed,
-    watch
+    watch,
+      LifeCycle
 
   }
 }
