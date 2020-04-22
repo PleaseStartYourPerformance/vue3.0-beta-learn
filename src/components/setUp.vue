@@ -1,5 +1,6 @@
 <template>
   <div class="hello">
+    <div> {{msg}}</div>
     <p>{{data.count}}</p>
     <button @click="addCount">++</button>
 
@@ -11,9 +12,16 @@
 export default {
   name: 'setUp',
   props: {
-    msg: String
+    msg: {
+      type:String
+    }
   },
-  setup(){//替代了beforeCreate和create  在这两个生命周期函数之前调用
+  setup(props,context){//替代了beforeCreate和create  在这两个生命周期函数之前调用
+
+    //props是父组件传递下来的
+    //context是替换掉之前的this
+    console.log(props)
+    console.log(context);
     const data = reactive({ //响应式数据
       count: 0
     })
