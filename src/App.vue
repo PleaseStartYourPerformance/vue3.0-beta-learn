@@ -5,7 +5,8 @@
       <watch v-if="false"  />
       <LifeCycle v-if="false"  />
       <ref v-if="false" />
-      <hooks v-if="true"/>
+      <hooks v-if="false"/>
+      <provide v-if="true"/>
   </div>
 </template>
 
@@ -16,6 +17,7 @@ import watch from './components/watch.vue'
 import LifeCycle from './components/LifeCycle.vue'
 import ref from './components/ref.vue'
 import hooks from './components/hooks'
+import provide from './components/provide.vue'
 export default {
   name: 'App',
   components: {
@@ -24,7 +26,8 @@ export default {
       watch,
       LifeCycle,
       ref,
-      hooks
+      hooks,
+      provide
   }
 }
 </script>
