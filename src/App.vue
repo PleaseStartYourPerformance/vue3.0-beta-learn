@@ -1,28 +1,30 @@
 <template>
   <div id="app">
-<!--    <setUp msg="我是从父组件APP传下来的msg"/>-->
-<!--    <div>setUP组件-结束线</div>-->
-<!--    <hr>-->
-<!--    <computed/>-->
-    <watch></watch>
-      <LifeCycle></LifeCycle>
+      <setUp v-if="false" msg="我是从父组件APP传下来的msg"/>
+      <computed v-if="false"  />
+      <watch v-if="false"  />
+      <LifeCycle v-if="false"  />
+      <ref v-if="false" />
+      <hooks v-if="true"/>
   </div>
 </template>
 
 <script>
-// import setUp from './components/setUp.vue'
-// import computed from './components/computed.vue'
+import setUp from './components/setUp.vue'
+import computed from './components/computed.vue'
 import watch from './components/watch.vue'
 import LifeCycle from './components/LifeCycle.vue'
-
+import ref from './components/ref.vue'
+import hooks from './components/hooks'
 export default {
   name: 'App',
   components: {
-    // setUp,
-    // computed,
-    watch,
-      LifeCycle
-
+      setUp,
+      computed,
+      watch,
+      LifeCycle,
+      ref,
+      hooks
   }
 }
 </script>
